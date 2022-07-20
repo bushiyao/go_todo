@@ -8,8 +8,12 @@ import (
 )
 
 func main() {
-
+	// init config
 	bootstrap.InitializeConfig()
+
+	global.App.Log = bootstrap.InitializeLog()
+	global.App.Log.Info("log init success")
+
 
 	r := gin.Default()
 
